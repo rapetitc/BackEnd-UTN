@@ -5,8 +5,10 @@ function adivina_numero_secreto() {
   let intentos = 0;
 
   while (true) {
-      const numero_usuario = readlineSync.question("divina el número secreto entre 1 y 100: ");
-      intentos++;
+    const numero_usuario = readlineSync.question("divina el número secreto entre 1 y 100: ");
+    intentos++;
+
+    console.clear();
 
     if (numero_usuario < numero_secreto) {
       console.log("El número es demasiado bajo. Intenta nuevamente.");
@@ -16,6 +18,7 @@ function adivina_numero_secreto() {
       console.log(`Felicidades, has adivinado el número secreto en ${intentos} intentos!`);
       break;
     }
+
   }
 }
 
